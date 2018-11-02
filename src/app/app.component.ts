@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DatosInicialesService } from './services/datos-iniciales.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'gentelella-CLI';
+  constructor(public _infoPagina: DatosInicialesService) {}
 }
