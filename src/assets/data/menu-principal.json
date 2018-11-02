@@ -1,0 +1,58 @@
+[{
+        "nombre_modulo": "General",
+        "menus": [{
+            "nombre_menu": "Accesos",
+            "icono": "fa fa-lock",
+            "formas": [{
+                    "nombre_forma": "Usuarios",
+                    "forma": "usuarios"
+                },
+                {
+                    "nombre_forma": "Roles",
+                    "forma": "roles"
+                },
+                {
+                    "nombre_forma": "Modulos",
+                    "forma": "modulos"
+                },
+                {
+                    "nombre_forma": "Formularios",
+                    "forma": "formularios"
+                },
+                {
+                    "nombre_forma": "Permisos",
+                    "forma": "permisos"
+                }
+            ]
+        }]
+    },
+    {
+        "nombre_modulo": "Laboratorio",
+        "menus": [{
+                "nombre_menu": "Archivo",
+                "icono": "fa fa-archive",
+                "formas": [{
+                        "nombre_forma": "Transformadores",
+                        "forma": "trafo"
+                    },
+                    {
+                        "nombre_forma": "Tensiones Primarias",
+                        "forma": "tensiones-primarias"
+                    },
+                    {
+                        "nombre_forma": "Tipos Transformadores",
+                        "forma": "tipo-trafo"
+                    }
+                ]
+            },
+            {
+                "nombre_menu": "Operaciones",
+                "icono": "fa fa-cubes",
+                "formas": [{
+                    "nombre_forma": "Ensayos",
+                    "forma": "ensayos"
+                }]
+            }
+        ]
+    }
+]

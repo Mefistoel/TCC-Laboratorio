@@ -558,7 +558,7 @@ function init_flot_chart() {
         console.log('Plot2');
 
         $.plot($("#chart_plot_02"), [{
-            label: "Email Sent",
+            label: "Transformadores Ensayados",
             data: chart_plot_02_data,
             lines: {
                 fillColor: "rgba(150, 202, 89, 0.12)"

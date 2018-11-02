@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { LoremComponent } from './ejemplos/lorem/lorem.component';
+import { GraphEnsayosRealizadosComponent } from './graph/graph-ensayos-realizados/graph-ensayos-realizados.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     SidebarComponent,
-    FooterComponent
+    FooterComponent,
+    LoremComponent,
+    GraphEnsayosRealizadosComponent
   ],
   imports: [
     BrowserModule,

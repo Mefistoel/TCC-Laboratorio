@@ -23,25 +23,13 @@
 
         <!-- sidebar menu -->
         <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-            <div class="menu_section">
-                <h3>GENERAL</h3>
-                <ul class="nav side-menu">
-                    <li><a><i class="fa fa-lock"></i> Accesos <span class="fa fa-chevron-down"></span></a>
+            <div class="menu_section" *ngFor="let modulo of _infoPagina.modulos">
+                <h3>{{modulo.nombre_modulo}}</h3>
+                <ul class="nav side-menu" *ngFor="let menu of modulo.menus">
+                    <li><a><i [class]="menu.icono"></i> {{menu.nombre_menu}} <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li>
-                                <a href="#Usuarios">Usuarios</a>
-                            </li>
-                            <li>
-                                <a href="#Roles">Roles</a>
-                            </li>
-                            <li>
-                                <a href="#Modulos">Modulos</a>
-                            </li>
-                            <li>
-                                <a href="#Formularios">Formularios</a>
-                            </li>
-                            <li>
-                                <a href="#Permisos">Permisos</a>
+                            <li *ngFor="let forma of menu.formas">
+                                <a href="#Usuarios">{{forma.nombre_forma}}</a>
                             </li>
                             <!-- <li>
                                     <a>Level One<span class="fa fa-chevron-down"></span></a>
