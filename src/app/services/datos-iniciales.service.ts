@@ -46,7 +46,7 @@ export class DatosInicialesService {
                this.cargado = true;
                this.modulos = resp;
                // console.log('Servicio Listo..');
-               console.log(this.modulos);
+               // console.log(this.modulos);
              });
    }
 }

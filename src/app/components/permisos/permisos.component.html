@@ -1,0 +1,65 @@
+<div class="x_panel animated fadeIn">
+    <div class="x_title">
+        <h2>Permisos</h2>
+        <ul class="nav navbar-right panel_toolbox">
+            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+            </li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+    <div class="x_content">
+
+        <form id="form-formulario">
+            <div class="row">
+                <!-- fila 1 -->
+                <div class="col col-md-1">
+                    <label class="form-control-static" for="id_rol">Id</label>
+                </div>
+                <div class="col col-md-2">
+                    <input id="id_rol" name="id_rol" onchange="buscar_id_rol()" type="text" class="form-control input-sm" value="0" placeholder="Id Rol">
+                </div>
+                <div class="col col-md-1">
+                    <button id="boton-buscar-rol" type="button" onclick="cargar_busqueda('frm/accesos/procesos/permisos/buscar_rol.html')" class="btn btn-sm btn-primary">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="col col-md-8">
+                    <input id="nombre_rol" name="nombre_rol" type="text" class="form-control input-sm" readonly="readonly" placeholder="Nombre Rol">
+                </div>
+            </div>
+        </form>
+        <div class="well well-sm">
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th rowspan="2" class="columna-id centrado oculto">Id</th>
+                        <th colspan="11" class="centrado">Formularios</th>
+                    </tr>
+                    <tr>
+                        <th class="columna-id centrado">Id</th>
+                        <th>Nombre</th>
+                        <th>Sistema</th>
+                        <th>Submenu</th>
+                        <th class="centrado">Agregar <input type="checkbox" onclick="seleccionar_todo($(this))"></th>
+                        <th class="centrado">Modificar <input type="checkbox" onclick="seleccionar_todo($(this))"></th>
+                        <th class="centrado">Eliminar <input type="checkbox" onclick="seleccionar_todo($(this))"></th>
+                        <th class="centrado">Consultar <input type="checkbox" onclick="seleccionar_todo($(this))"></th>
+                        <th class="centrado">Listar <input type="checkbox" onclick="seleccionar_todo($(this))"></th>
+                        <th class="centrado">Informes <input type="checkbox" onclick="seleccionar_todo($(this))"></th>
+                        <th class="centrado">Exportar <input type="checkbox" onclick="seleccionar_todo($(this))"></th>
+                    </tr>
+                </thead>
+                <tbody id="tbody_datos_permisos">
+
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="14">
+                            <span id="permisos-totales">TOTAL REGISTROS: 0</span>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</div>

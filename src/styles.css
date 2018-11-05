@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+/*.container {
+    text-align: center
+}*/
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.center {
+    margin: 0 auto;
+    display: inline-block
+}
+
+.no-gutters {
+    margin: 0;
+}

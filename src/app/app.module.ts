@@ -8,6 +8,19 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { LoremComponent } from './ejemplos/lorem/lorem.component';
 import { GraphEnsayosRealizadosComponent } from './graph/graph-ensayos-realizados/graph-ensayos-realizados.component';
+import { PersonasComponent } from './components/personas/personas.component';
+import { UsuariosComponent } from './components/usuarios/usuarios.component';
+import { FormulariosComponent } from './components/formularios/formularios.component';
+import { RolesComponent } from './components/roles/roles.component';
+import { MenusComponent } from './components/menus/menus.component';
+import { AppRoutingModule } from './app-routing.module';
+import { ModulosComponent } from './components/modulos/modulos.component';
+import { LaboratoristasComponent } from './components/laboratoristas/laboratoristas.component';
+import { ClientesComponent } from './components/clientes/clientes.component';
+import { FiscalesComponent } from './components/fiscales/fiscales.component';
+import { PermisosComponent } from './components/permisos/permisos.component';
+import { UsuRolesComponent } from './components/usu-roles/usu-roles.component';
+import { EnsayosComponent } from './components/ensayos/ensayos.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +29,24 @@ import { GraphEnsayosRealizadosComponent } from './graph/graph-ensayos-realizado
     SidebarComponent,
     FooterComponent,
     LoremComponent,
-    GraphEnsayosRealizadosComponent
+    GraphEnsayosRealizadosComponent,
+    PersonasComponent,
+    UsuariosComponent,
+    FormulariosComponent,
+    RolesComponent,
+    MenusComponent,
+    ModulosComponent,
+    LaboratoristasComponent,
+    ClientesComponent,
+    FiscalesComponent,
+    PermisosComponent,
+    UsuRolesComponent,
+    EnsayosComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

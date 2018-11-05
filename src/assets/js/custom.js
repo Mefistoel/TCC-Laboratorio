@@ -72,9 +72,13 @@ function init_sidebar() {
     };
 
     $SIDEBAR_MENU.find('a').on('click', function(ev) {
-        console.log('clicked - sidebar_menu');
+        // console.log('clicked - sidebar_menu');
         var $li = $(this).parent();
-
+        // Mef
+        // Para que funcione con angular
+        $('.child_menu .active').removeClass('active');
+        $('.child_menu .current-page').removeClass('current-page');
+        // /Mef
         if ($li.is('.active')) {
             $li.removeClass('active active-sm');
             $('ul:first', $li).slideUp(function() {
@@ -207,7 +211,7 @@ $(document).ready(function() {
 
 
 // iCheck
-$(document).ready(function() {
+/*$(document).ready(function() {
     if ($("input.flat")[0]) {
         $(document).ready(function() {
             $('input.flat').iCheck({
@@ -216,7 +220,7 @@ $(document).ready(function() {
             });
         });
     }
-});
+});*/
 // /iCheck
 
 // Table

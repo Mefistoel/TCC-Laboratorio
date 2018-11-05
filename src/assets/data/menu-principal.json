@@ -1,49 +1,45 @@
 [{
-        "nombre_modulo": "General",
-        "menus": [{
-            "nombre_menu": "Accesos",
-            "icono": "fa fa-lock",
-            "formas": [{
-                    "nombre_forma": "Usuarios",
-                    "forma": "usuarios"
-                },
-                {
-                    "nombre_forma": "Roles",
-                    "forma": "roles"
-                },
-                {
-                    "nombre_forma": "Modulos",
-                    "forma": "modulos"
-                },
-                {
-                    "nombre_forma": "Formularios",
-                    "forma": "formularios"
-                },
-                {
-                    "nombre_forma": "Permisos",
-                    "forma": "permisos"
-                }
-            ]
-        }]
-    },
-    {
-        "nombre_modulo": "Laboratorio",
+        "nombre_modulo": "Tecnico",
         "menus": [{
                 "nombre_menu": "Archivo",
                 "icono": "fa fa-archive",
                 "formas": [{
+                        "nombre_forma": "Contratos",
+                        "forma": "contratos"
+                    },
+                    {
+                        "nombre_forma": "Tipos de Transformadores",
+                        "forma": "tipos-trafo"
+                    },
+                    {
+                        "nombre_forma": "Proyectos",
+                        "forma": "proyectos"
+                    },
+                    {
                         "nombre_forma": "Transformadores",
-                        "forma": "trafo"
-                    },
-                    {
-                        "nombre_forma": "Tensiones Primarias",
-                        "forma": "tensiones-primarias"
-                    },
-                    {
-                        "nombre_forma": "Tipos Transformadores",
-                        "forma": "tipo-trafo"
+                        "forma": "trafos"
                     }
                 ]
+            },
+            {
+                "nombre_menu": "Reportes",
+                "icono": "fa fa-newspaper-o",
+                "formas": [{
+                    "nombre_forma": "Reporte de contraros",
+                    "forma": "rep-contratos"
+                }]
+            }
+        ]
+    },
+    {
+        "nombre_modulo": "Laboratorio",
+        "menus": [{
+                "nombre_menu": "Definiciones",
+                "icono": "fa fa-folder",
+                "formas": [{
+                    "nombre_forma": "Relatorios",
+                    "forma": "relatorios"
+                }]
             },
             {
                 "nombre_menu": "Operaciones",
@@ -52,6 +48,72 @@
                     "nombre_forma": "Ensayos",
                     "forma": "ensayos"
                 }]
+            },
+            {
+                "nombre_menu": "Reportes",
+                "icono": "fa fa-newspaper-o",
+                "formas": [{
+                    "nombre_forma": "Reporte de ensayos",
+                    "forma": "rep-ensayos"
+                }]
+            }
+        ]
+    },
+    {
+        "nombre_modulo": "General",
+        "menus": [{
+                "nombre_menu": "Personas",
+                "icono": "fa fa-users",
+                "formas": [{
+                        "nombre_forma": "Personas",
+                        "forma": "personas"
+                    },
+                    {
+                        "nombre_forma": "Usuarios",
+                        "forma": "usuarios"
+                    },
+                    {
+                        "nombre_forma": "Laboratoristas",
+                        "forma": "laboratoristas"
+                    },
+                    {
+                        "nombre_forma": "Clientes",
+                        "forma": "clientes"
+                    },
+                    {
+                        "nombre_forma": "Fiscales",
+                        "forma": "fiscales"
+                    }
+                ]
+            },
+            {
+                "nombre_menu": "Accesos",
+                "icono": "fa fa-lock",
+                "formas": [{
+                        "nombre_forma": "Modulos",
+                        "forma": "modulos"
+                    },
+                    {
+                        "nombre_forma": "Menus",
+                        "forma": "menus"
+                    },
+                    {
+                        "nombre_forma": "Formularios",
+                        "forma": "formularios"
+                    },
+                    {
+                        "nombre_forma": "Roles",
+                        "forma": "roles"
+                    },
+                    {
+                        "nombre_forma": "Permisos",
+                        "forma": "permisos"
+                    },
+                    {
+                        "nombre_forma": "Asignar roles a usuarios",
+                        "forma": "usu-roles"
+                    }
+                ]
             }
         ]
     }

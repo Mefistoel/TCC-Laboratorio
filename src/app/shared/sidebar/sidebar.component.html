@@ -2,7 +2,7 @@
 <div class="col-md-3 left_col menu_fixed">
     <div class="left_col scroll-view">
         <div class="navbar nav_title" style="border: 0;">
-            <a href="index.html" class="site_title"><i class="fa fa-desktop"></i> <span>&nbsp;{{_infoPagina.info.nombre}}</span></a>
+            <a [routerLink]="['']" class="site_title"><i class="fa fa-desktop"></i> <span>&nbsp;{{_infoPagina.info.nombre}}</span></a>
         </div>
 
         <div class="clearfix"></div>
@@ -29,7 +29,7 @@
                     <li><a><i [class]="menu.icono"></i> {{menu.nombre_menu}} <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <li *ngFor="let forma of menu.formas">
-                                <a href="#Usuarios">{{forma.nombre_forma}}</a>
+                                <a [routerLink]="forma.forma">{{forma.nombre_forma}}</a>
                             </li>
                             <!-- <li>
                                     <a>Level One<span class="fa fa-chevron-down"></span></a>
@@ -72,3 +72,5 @@
     </div>
 </div>
 <!-- /sidebar -->
+<!-- Custom Theme Scripts -->
+<script src="../../../assets/js/custom.js"></script>
