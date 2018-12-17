@@ -18,3 +18,21 @@
 .no-gutters {
     margin: 0;
 }
+
+.centrar-texto {
+    text-align: center;
+}
+
+.derecha-texto {
+    text-align: right;
+}
+
+.centrar-contenido {
+    display: flex;
+    justify-content: center;
+}
+
+.derecha-contenido {
+    display: flex;
+    justify-content: right;
+}
