@@ -19,7 +19,7 @@ export class DatosInicialesService {
     this.cargarMenuPrincipal();
    }
 
-  private cargarInfo () {
+  public cargarInfo () {
     // Leer archivo Json
     this.http.get('assets/data/datos-empresa.json')
              .subscribe((resp: DatosEmpresa) => {

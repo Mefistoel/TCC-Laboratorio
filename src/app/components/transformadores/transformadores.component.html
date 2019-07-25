@@ -1,0 +1,39 @@
+<div class="x_panel  animated fadeIn">
+    <div class="x_title">
+        <h2>Transformadores</h2>
+        <ul class="nav navbar-right panel_toolbox">
+            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+            </li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+    <div class="x_content">
+        <div class="col col-md-12 table-responsive">
+            <table id="dataTable" class="table table-striped jambo_table table-bordered table-sm">
+                <thead>
+                    <tr class="headings">
+                        <th>id</th>
+                        <th>Orden de Trabajo</th>
+                        <th>Nro Fabrica</th>
+                        <th>Nro Ande</th>
+                        <th>Observacion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let k of trafos; let i = index">
+                        <td>{{k.id}}</td>
+                        <td>{{k.orden_trabajo}}</td>
+                        <td>{{k.nro_fabrica}}</td>
+                        <td>{{k.nro_ande}}</td>
+                        <td>{{k.observacion}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script>
+    $('.dataTable').each(function() {
+        $(this).dataTable().fnDraw();
+    });
+</script>

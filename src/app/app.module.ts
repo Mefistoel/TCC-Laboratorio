@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import {HttpModule} from '@angular/http';
 
+// Componentes
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
@@ -21,6 +23,12 @@ import { FiscalesComponent } from './components/fiscales/fiscales.component';
 import { PermisosComponent } from './components/permisos/permisos.component';
 import { UsuRolesComponent } from './components/usu-roles/usu-roles.component';
 import { EnsayosComponent } from './components/ensayos/ensayos.component';
+import { TransformadoresComponent } from './components/transformadores/transformadores.component';
+
+// Servicions
+import { DatosInicialesService } from './services/datos-iniciales.service';
+
+import { EnsayosService } from './services/ensayos.service';
 
 @NgModule({
   declarations: [
@@ -41,14 +49,16 @@ import { EnsayosComponent } from './components/ensayos/ensayos.component';
     FiscalesComponent,
     PermisosComponent,
     UsuRolesComponent,
-    EnsayosComponent
+    EnsayosComponent,
+    TransformadoresComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [EnsayosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

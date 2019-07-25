@@ -15,6 +15,7 @@ import { FiscalesComponent } from './components/fiscales/fiscales.component';
 import { PermisosComponent } from './components/permisos/permisos.component';
 import { UsuRolesComponent } from './components/usu-roles/usu-roles.component';
 import { EnsayosComponent } from './components/ensayos/ensayos.component';
+import {TransformadoresComponent} from './components/transformadores/transformadores.component';
 
 const app_routes: Routes = [
     { path: 'principal', component: GraphEnsayosRealizadosComponent },
@@ -30,6 +31,7 @@ const app_routes: Routes = [
     { path: 'usu-roles', component: UsuRolesComponent },
     { path: 'ensayos', component: EnsayosComponent },
     { path: 'laboratoristas', component: LaboratoristasComponent },
+    { path: 'transformadores', component: TransformadoresComponent },
     {path: '**', pathMatch: 'full', redirectTo: 'principal'}
 
     // { path: 'path/:routeParam', component: MyComponent },

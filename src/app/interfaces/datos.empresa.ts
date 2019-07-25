@@ -3,4 +3,5 @@ export interface DatosEmpresa {
   descripcion?: string;
   ruc?: string;
   direccion?: string;
+  ws?: string;
 }
