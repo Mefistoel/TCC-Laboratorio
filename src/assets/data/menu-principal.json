@@ -116,5 +116,16 @@
                 ]
             }
         ]
+    },
+    {
+        "nombre_modulo": "Test",
+        "menus": [{
+            "nombre_menu": "Ejemplos",
+            "icono": "fa fa-book",
+            "formas": [{
+                "nombre_forma": "Ejemplo",
+                "forma": "ejemplos"
+            }]
+        }]
     }
 ]

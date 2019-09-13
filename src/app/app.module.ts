@@ -29,6 +29,7 @@ import { TransformadoresComponent } from './components/transformadores/transform
 import { DatosInicialesService } from './services/datos-iniciales.service';
 
 import { EnsayosService } from './services/ensayos.service';
+import { EjemplosComponent } from './components/ejemplos/ejemplos.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { EnsayosService } from './services/ensayos.service';
     PermisosComponent,
     UsuRolesComponent,
     EnsayosComponent,
-    TransformadoresComponent
+    TransformadoresComponent,
+    EjemplosComponent
   ],
   imports: [
     BrowserModule,

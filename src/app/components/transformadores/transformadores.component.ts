@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {EnsayosService} from '../../services/ensayos.service';
 import { Transformador } from '../../Models/TransformadorModel';
+import $ from 'jquery';
+
 
 
 @Component({
@@ -11,13 +13,14 @@ import { Transformador } from '../../Models/TransformadorModel';
 export class TransformadoresComponent implements OnInit {
   trafos: Transformador[];
   constructor(private _EnsayosService: EnsayosService) {
-
     this._EnsayosService.getListarTrafos().subscribe(data => {
       this.trafos = data;
     });
+    /*$('.dataTable').each(function() {
+      $(this).dataTable().fnDraw();
+      });*/
   }
 
   ngOnInit() {
   }
-
 }
