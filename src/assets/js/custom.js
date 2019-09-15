@@ -54,25 +54,35 @@ var CURRENT_URL = window.location.href.split('#')[0].split('?')[0],
 
 
 // Sidebar
+// TODO: This is some kind of easy fix, maybe we can improve this
+function setContentHeight() {
+    // reset height
+    $RIGHT_COL.css('min-height', $(window).height());
+
+    var bodyHeight = $BODY.outerHeight(),
+        footerHeight = $BODY.hasClass('footer_fixed') ? -10 : $FOOTER.height(),
+        leftColHeight = $LEFT_COL.eq(1).height() + $SIDEBAR_FOOTER.height(),
+        contentHeight = bodyHeight < leftColHeight ? leftColHeight : bodyHeight;
+
+    // normalize content
+    contentHeight -= $NAV_MENU.height() + footerHeight;
+
+    $RIGHT_COL.css('min-height', contentHeight);
+};
+
 function init_sidebar() {
-    // TODO: This is some kind of easy fix, maybe we can improve this
-    var setContentHeight = function() {
-        // reset height
-        $RIGHT_COL.css('min-height', $(window).height());
-
-        var bodyHeight = $BODY.outerHeight(),
-            footerHeight = $BODY.hasClass('footer_fixed') ? -10 : $FOOTER.height(),
-            leftColHeight = $LEFT_COL.eq(1).height() + $SIDEBAR_FOOTER.height(),
-            contentHeight = bodyHeight < leftColHeight ? leftColHeight : bodyHeight;
-
-        // normalize content
-        contentHeight -= $NAV_MENU.height() + footerHeight;
-
-        $RIGHT_COL.css('min-height', contentHeight);
-    };
-
+    console.log('Side Bar iniciado');
+    var CURRENT_URL = window.location.href.split('#')[0].split('?')[0],
+        $BODY = $('body'),
+        $SIDEBAR_MENU = $('#sidebar-menu'),
+        $SIDEBAR_FOOTER = $('.sidebar-footer'),
+        $LEFT_COL = $('.left_col'),
+        $RIGHT_COL = $('.right_col'),
+        $NAV_MENU = $('.nav_menu'),
+        $FOOTER = $('footer');
+    console.log($SIDEBAR_MENU.find('a'));
     $SIDEBAR_MENU.find('a').on('click', function(ev) {
-        // //console.log('clicked - sidebar_menu');
+        console.log('clicked - sidebar_menu');
         var $li = $(this).parent();
         // Mef
         // Para que funcione con angular
@@ -103,25 +113,6 @@ function init_sidebar() {
         }
     });
 
-    // toggle small or large menu 
-    $MENU_TOGGLE.on('click', function() {
-        //console.log('clicked - menu toggle');
-
-        if ($BODY.hasClass('nav-md')) {
-            $SIDEBAR_MENU.find('li.active ul').hide();
-            $SIDEBAR_MENU.find('li.active').addClass('active-sm').removeClass('active');
-        } else {
-            $SIDEBAR_MENU.find('li.active-sm ul').show();
-            $SIDEBAR_MENU.find('li.active-sm').addClass('active').removeClass('active-sm');
-        }
-
-        $BODY.toggleClass('nav-md nav-sm');
-
-        setContentHeight();
-
-        $('.dataTable').each(function() { $(this).dataTable().fnDraw(); });
-    });
-
     // check active menu
     $SIDEBAR_MENU.find('a[href="' + CURRENT_URL + '"]').parent('li').addClass('current-page');
 
@@ -147,6 +138,32 @@ function init_sidebar() {
         });
     }
 };
+// toggle Sidebar
+function toggleSidebar() {
+    var $BODY = $('body'),
+        $SIDEBAR_MENU = $('#sidebar-menu'),
+        $MENU_TOGGLE = $('#menu_toggle');
+    console.log('Toggle Bar iniciado');
+    //console.log($MENU_TOGGLE);
+    // toggle small or large menu 
+    $MENU_TOGGLE.on('click', function() {
+        console.log('clicked - menu toggle');
+
+        if ($BODY.hasClass('nav-md')) {
+            $SIDEBAR_MENU.find('li.active ul').hide();
+            $SIDEBAR_MENU.find('li.active').addClass('active-sm').removeClass('active');
+        } else {
+            $SIDEBAR_MENU.find('li.active-sm ul').show();
+            $SIDEBAR_MENU.find('li.active-sm').addClass('active').removeClass('active-sm');
+        }
+
+        $BODY.toggleClass('nav-md nav-sm');
+
+        setContentHeight();
+
+        $('.dataTable').each(function() { $(this).dataTable().fnDraw(); });
+    });
+}
 // /Sidebar
 
 var randNum = function() {
@@ -5014,10 +5031,11 @@ function init_echarts() {
 
 
 $(document).ready(function() {
-
+    console.log('Js iniciado');
     init_sparklines();
     init_flot_chart();
     init_sidebar();
+    toggleSidebar();
     init_wysiwyg();
     init_InputMask();
     init_JQVmap();

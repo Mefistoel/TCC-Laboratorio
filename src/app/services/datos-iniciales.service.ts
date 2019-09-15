@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Usuario } from '../interfaces/datos.usuario';
 import { Modulos } from '../interfaces/menu-principal';
 
+declare function init_sidebar(): any;
 @Injectable({
   providedIn: 'root'
 })
@@ -45,8 +46,14 @@ export class DatosInicialesService {
              .subscribe((resp: Modulos[]) => {
                this.cargado = true;
                this.modulos = resp;
-               // console.log('Servicio Listo..');
-               // console.log(this.modulos);
+               this.AsyncTask(500);
              });
    }
+   AsyncTask(x) {
+    return new Promise(resolver => {
+      setTimeout(() => {
+        init_sidebar();
+      }, x);
+    });
+  }
 }
