@@ -71,7 +71,7 @@ function setContentHeight() {
 };
 
 function init_sidebar() {
-    console.log('Side Bar iniciado');
+    // console.log('Side Bar iniciado');
     var CURRENT_URL = window.location.href.split('#')[0].split('?')[0],
         $BODY = $('body'),
         $SIDEBAR_MENU = $('#sidebar-menu'),
@@ -80,9 +80,9 @@ function init_sidebar() {
         $RIGHT_COL = $('.right_col'),
         $NAV_MENU = $('.nav_menu'),
         $FOOTER = $('footer');
-    console.log($SIDEBAR_MENU.find('a'));
+    // console.log($SIDEBAR_MENU.find('a'));
     $SIDEBAR_MENU.find('a').on('click', function(ev) {
-        console.log('clicked - sidebar_menu');
+        // console.log('clicked - sidebar_menu');
         var $li = $(this).parent();
         // Mef
         // Para que funcione con angular
@@ -143,11 +143,11 @@ function toggleSidebar() {
     var $BODY = $('body'),
         $SIDEBAR_MENU = $('#sidebar-menu'),
         $MENU_TOGGLE = $('#menu_toggle');
-    console.log('Toggle Bar iniciado');
+    // console.log('Toggle Bar iniciado');
     //console.log($MENU_TOGGLE);
     // toggle small or large menu 
     $MENU_TOGGLE.on('click', function() {
-        console.log('clicked - menu toggle');
+        // console.log('clicked - menu toggle');
 
         if ($BODY.hasClass('nav-md')) {
             $SIDEBAR_MENU.find('li.active ul').hide();
@@ -5031,7 +5031,7 @@ function init_echarts() {
 
 
 $(document).ready(function() {
-    console.log('Js iniciado');
+    // console.log('Js iniciado');
     init_sparklines();
     init_flot_chart();
     init_sidebar();
